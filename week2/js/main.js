@@ -129,7 +129,7 @@ var storeData = function(data){
         item.amount		= ["Amount of items:", $('#amount').val()];
         item.notes 		= ["Notes:", $('#notes').val()];
 		
-		//save to local storage: use stringify to convert to string
+	//save to local storage
 	console.log(id, item);
        localStorage.setItem(id, JSON.stringify(item));
        alert("Note Saved!");
@@ -142,7 +142,7 @@ var storeData = function(data){
 }; 
 
  var editItem = function(){
-    	//grab item data from local storage
+    	//grab data from local storage
     	var value = localStorage.getItem(this.key);
     	var item = JSON.parse(value);
     	   	
