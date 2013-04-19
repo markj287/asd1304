@@ -26,7 +26,8 @@
 
                 <ul data-role="listview" data-divider-theme="b" data-inset="true" data-corners="false">
                     <li data-role="list-divider" role="heading">App Infomation</li>
-					<li data-theme="c"><a href="#about" data-transition="slide">Info</a></li>
+				<li data-theme="c"><a href="#about" data-transition="slide">Info</a></li>
+				<li data-theme="c"><a href="#save-notes" id="save-notes" data-transition="slide">XHR Data</a></li>
                 </ul>
                 <div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
@@ -170,7 +171,100 @@
 			</div>
 		</div>
     </div>
- 
+
+
+     <!-- XHR Data Page -->
+      <div data-role="page" id="save-notes"  data-add-back-btn="true">
+
+          <div data-role="header" data-theme="b">
+            <h4>XHR Data</h4>
+          </div>
+
+          <div data-role="content">
+              <p><a href="#" id="csv-data-btn" data-role="button" data-corners="false"   data-transition="slide">Csv Data</a></p>
+              <p><a href="#" id="js-data-btn" data-role="button" data-corners="false"  data-transition="slide">Json Data</a></p>
+              <p><a href="#" id="xml-data-btn" data-role="button" data-corners="false" data-transition="slide">Xml data</a></p>
+          </div>
+
+          	<div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="navbar" data-iconpos="top">
+				<ul>
+					<li><a href="#home" data-theme="b" data-transition="slide">Home</a></li>
+					<li><a href="#additem" data-theme="b" data-transition="slide">New Note</a></li>
+					<li><a href="#about" data-theme="b"  data-transition="slide">Info</a></li>
+				</ul>
+			</div>
+		</div>	
+
+        </div><!-- end xhr page -->
+
+        <!-- LOAD JSON DATA PAGE -->
+      <div data-role="page" id="json-page" data-theme="b" data-add-back-btn="true">
+
+        <div data-role="header" data-theme="b">
+          <h4>Json Data</h4>
+        </div><!-- end header -->
+
+        <div data-role="content" id="js-container">
+        </div>
+        
+       <div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="navbar" data-iconpos="top">
+				<ul>
+					<li><a href="#home" data-theme="b" data-transition="slide">Home</a></li>
+					<li><a href="#additem" data-theme="b" data-transition="slide">New Note</a></li>
+					<li><a href="#about" data-theme="b"  data-transition="slide">Info</a></li>
+				</ul>
+			</div>
+		</div>
+
+      </div>
+
+      <!-- LOAD CSV DATA PAGE -->
+      <div data-role="page" id="siblings" data-theme="b" data-add-back-btn="true">
+
+        <div data-role="header" data-theme="b">
+          <h4>Csv Data</h4>
+        </div><!-- end header -->
+
+        <div data-role="content" id="csv-container">
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="navbar" data-iconpos="top">
+				<ul>
+					<li><a href="#home" data-theme="b" data-transition="slide">Home</a></li>
+					<li><a href="#additem" data-theme="b" data-transition="slide">New Note</a></li>
+					<li><a href="#about" data-theme="b"  data-transition="slide">Info</a></li>
+				</ul>
+			</div>
+		</div>
+
+      </div>
+
+      <!-- LOAD XML DATA PAGE -->
+      <div data-role="page" id="xml-page" data-theme="b" data-add-back-btn="true">
+
+        <div data-role="header" data-theme="b">
+         <h4>Xml Data</h4>
+        </div><!-- end header -->
+
+        <div data-role="content" id="xml-container">
+        </div>
+        
+        <div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="navbar" data-iconpos="top">
+				<ul>
+					<li><a href="#home" data-theme="b" data-transition="slide">Home</a></li>
+					<li><a href="#additem" data-theme="b" data-transition="slide">New Note</a></li>
+					<li><a href="#about" data-theme="b"  data-transition="slide">Info</a></li>
+				</ul>
+			</div>
+		</div>
+
+      </div>
+
+
 <!-- about page --> 
     <div data-role="page" data-theme="b" id="about">
         <div data-role="header" data-theme="b">
@@ -182,6 +276,7 @@
         	<a data-role="button" data-transition="slide" data-corners="false" data-theme="b" href="#">Follow me on twitter</a>
             <a data-role="button" data-transition="slide" data-corners="false" data-theme="b" href="#">Github Repo</a>
         </div>
+
 		<div data-role="footer" data-position="fixed" data-id="home">
 			<div data-role="navbar" data-iconpos="top">
 				<ul>
@@ -200,6 +295,7 @@
 	<script src="js/libs/jquery.validate.min.js"></script>
 	<script src="js/json.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/remote.js"></script>
 
 </body>
 </html>
