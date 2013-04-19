@@ -1,63 +1,64 @@
+
 {"players": [
-		{
+	{
 		"name" : "Micheal Jordan",
-		"championships_Won": "6",
+		"championships_Won": "6", 
 		"points_scored" : "32,292",
 		"notes": "6 time MVP. 6 scoring titles"
-		},
-		{
+	},
+	{
 		"name" : "Kareem Jubar",
 		"championships_Won": "6",
 		"points_scored" : "38,387",
 		"notes": "6 time MVP"
-		},
-		{
+	},
+	{
 		"name" : "Wilt Chamberland",
 		"championships_Won": "2",
 		"points_scored": "31,419",
 		"notes": "Scored 100 points in a single game, most ever."
-		},
-		{
+	},
+	{
 		"name" : "Magic Johnson",
 		"championships_Won": "5",
 		"points_scored": "17,707",
 		"notes": "Asist total of 10,141. 4 time MVP."
-		},
-		{
+	},
+	{
 		"name" : "Larry Bird",
 		"championships_Won" : "4",
 		"points_scored" : "21,791",
 		"notes": "3 time MVP"
-		},
-		{
+	},
+	{
 		"name" : "Oscar Robinson",
 		"championships_Won" : "1",
 		"points_scored" : "26,791",
 		"notes": "Only player ever to average a triple double in a season."
-		},
-		{
+	},
+	{
 		"name" : "Bill Russel",
 		"championships_Won" : "11",
 		"points_scored" : "14,522",
 		"notes": "Won 9 championships as a player and 2 as a coach of the celtics."
-		},
-		{
+	},
+	{
 		"name" : "Tim Duncan",
 		"championships_Won" : "4",
 		"points_scored" : "23,244",
 		"notes": "Still currently playing and is considered the best power forward of all time."
-		},
-		{
+	},
+	{
 		"name" : "Kobe Bryant",
 		"championships_Won" : "5",
 		"points_scored" :"30,619",
 		"notes": "Still currently playing. One of only 3 players to score 30,000 or more career points."
-		},
-		{
+	},
+	{
 		"name" : "Jery West",
 		"championships_Won" : "1",
 		"points_scored" : "25,192",
 		"notes": "The NBA logo was desinged from his image."
-		}
-	]
-}
+	}
+]}
+
