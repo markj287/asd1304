@@ -3,10 +3,23 @@ $('#home').on('pageinit', function(){
 		"url": "_view/notes",
 		"dataType": "json",
 		"success": function(data) {
-			console.log(data);
-			$.each(data.rows, function(index, value){
+			$.each(data.rows, function(index, note){
+			
+				var title = note.value.title;
+				var date = note.value.date;
+				var where = note.value.where;
+				var notes = note.value.notes;
 				
+				$('#noteList').append(
+					$('<li>').append(
+						$('<a>').attr("href","#")
+						.text("Title: " + title + " Date: " + date + " Where: " + where + " Notes: " + notes)
+					)
+				);
 			});
+			
+			$('#noteList').listview('refresh');
+			
 		}
 	});
 });

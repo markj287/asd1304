@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Note Mate</title>
+	<title>Note Mate</title>	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="cleartype" content="on">
 	<link rel="stylesheet" href="css/jquery.mobile-1.3.0.min.css" />
@@ -26,8 +26,9 @@
 
                 <ul data-role="listview" data-divider-theme="b" data-inset="true" data-corners="false">
                     <li data-role="list-divider" role="heading">App Infomation</li>
-				<li data-theme="c"><a href="#about" data-transition="slide">Info</a></li>
-				<li data-theme="c"><a href="#save-notes" id="save-notes" data-transition="slide">XHR Data</a></li>
+					<li data-theme="c"><a href="#about" data-transition="slide">Info</a></li>
+					<li data-theme="c"><a href="#save-notes" id="save-notes" data-transition="slide">XHR Data</a></li>
+					<li data-theme="c"><a href="#couchdb" data-transition="slide">Couch DB Database</a></li>
                 </ul>
                 <div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
@@ -159,6 +160,29 @@
         </div>
 		
 		<div data-role="content" id="displaydata">
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="navbar" data-iconpos="top">
+				<ul>
+					<li><a href="#home" data-theme="b" data-transition="slide">Home</a></li>
+					<li><a href="#additem" data-theme="b" data-transition="slide">New Note</a></li>
+					<li><a href="#about" data-theme="b"  data-transition="slide">Info</a></li>
+				</ul>
+			</div>
+		</div>
+    </div>
+    
+    
+    <!-- Couch DB Page -->	
+	<div data-role="page" data-theme="b" id="couchdb">
+        <div data-position="fixed" data-role="header" data-theme="b">
+            <a href="#home" data-rel="back">Back</a>
+            <h1>Display Dynamic CouchDB Notes</h1>
+        </div>
+	
+		<div data-role="content" id="displayCouch">
+			<ul id="noteList" data-role="listview"></ul>
 		</div>
 		
 		<div data-role="footer" data-position="fixed" data-id="home">
