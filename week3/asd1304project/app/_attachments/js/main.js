@@ -1,5 +1,14 @@
 $('#home').on('pageinit', function(){
-
+	$.ajax({
+		"url": "_view/notes",
+		"dataType": "json",
+		"success": function(data) {
+			console.log(data);
+			$.each(data.rows, function(index, value){
+				
+			});
+		}
+	});
 });
 
 //Loads data.csv
