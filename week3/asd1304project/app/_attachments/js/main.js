@@ -12,8 +12,7 @@ $('#home').on('pageinit', function(){
 				
 				$('#noteList').append(
 					$('<li>')
-						.text("Title: " + title + " Date: " + date + " Where: " + where + " Notes: " + notes)
-					
+						.text("Title: " + title )//+ " Date: " + date + " Where: " + where + " Notes: " + notes)
 				);
 			});
 			
