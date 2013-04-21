@@ -11,10 +11,9 @@ $('#home').on('pageinit', function(){
 				var notes = note.value.notes;
 				
 				$('#noteList').append(
-					$('<li>').append(
-						$('<a>').attr("href","#")
+					$('<li>')
 						.text("Title: " + title + " Date: " + date + " Where: " + where + " Notes: " + notes)
-					)
+					
 				);
 			});
 			

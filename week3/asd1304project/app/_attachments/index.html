@@ -44,7 +44,7 @@
         </div>
 
 <!-- additem page -->		
-	<div data-role="page" data-theme="b" id="additem">
+	<div data-role="page"  id="additem">
 		<div data-position="fixed" data-role="header" data-theme="b">
 			<a href="#home" data-rel="back">Back</a>
 			<h3>New Note</h3>
@@ -62,14 +62,15 @@
 							
 			<div id="inputs">
 				<form action="" id="noteForm" method="">
-					<div data-role="fieldcontain">
+				<ul data-role="listview" data-inset="true">
+					<li data-role="fieldcontain">
 						<fieldset data-role="controlgroup">
 							<label for="title">*Title:</label> 
 							<input class="required" id="title" name="title" type="text" placeholder="note title"/>
 						</fieldset>
-					</div>
+					</li>
 
-					<div data-role="fieldcontain">
+					<li data-role="fieldcontain">
 						<label for="selectCat">*Category:</label> 
 						<select name="selectCat" id="selectCat" data-theme="c" class="required" value="Please Select Category">
 							<option data-placeholder="selection" value>Select category</option>
@@ -79,23 +80,23 @@
 							<option value="sports">Sports</option>
 							<option value="personal">Personal</option>
 						</select>
-					</div>
+					</liv>
 
-					<div data-role="fieldcontain">
+					<li data-role="fieldcontain">
 						<fieldset data-role="controlgroup">
 							<label for="dadded">*Date:</label>
 							<input id="dadded" name="dadded" type="date" class="required"/>
 						</fieldset>
-					</div>
+					</li>
 
-					<div data-role="fieldcontain">
+					<li data-role="fieldcontain">
 						<fieldset data-role="controlgroup">
 							<label for="where">Where will this be:</label>
 							<input id="where" name="where" type="text"/>
 						</fieldset>
-					</div>
+					</li>
 
-					<div data-role="fieldcontain">
+					<li data-role="fieldcontain">
 						<fieldset data-role="controlgroup">
 							<legend>Make this a favorite:</legend>
 							<input data-theme="c" id="type-1" name="favorite" type="radio" value="Yes" checked="checked"/>
@@ -103,29 +104,33 @@
 							<input data-theme="c" id="type-2" name="favorite" type="radio" value="No"/> 
 							<label for="type-2">No</label>
 						</fieldset>
-					</div>
+					</li>
 
-					<div data-role="fieldcontain">
+					<li data-role="fieldcontain">
 						<fieldset data-role="controlgroup">
 							<label for="amount">Amount of Items needed:</label>
 							<input data-highlight="true" data-theme="c" id="amount" max="100" min="1" name="amount" type="range" value="1"/>
 						</fieldset>
-					</div>
+					</li>
 
-					<div data-role="fieldcontain">
+					<li data-role="fieldcontain">
 						<fieldset data-role="controlgroup">
 							<label for="notes">*Notes:</label> 
 							<textarea id="notes" name="notes" class="required"></textarea>
 						</fieldset>
-					</div>
-
-					<div data-role="fieldcontain">
-						<input id="submit" data-theme="b" data-corners="false" type="submit" value="Save"/> 
-					</div>
-					<div data-role="fieldcontain" style="display:none;">
-						<input id="saveedits" data-theme="b" data-corners="false" type="submit" value="Save Edits"/> 
-					</div>
+					</li>
 					
+					<li class="ui-body ui-body-b">
+						<fieldset>
+							<div>
+								<input id="submit" data-theme="b" data-corners="false" type="submit" value="Save"/> 
+							</div>
+							<div style="display:none;">
+								<input id="saveedits" data-theme="b" data-corners="false" type="submit" value="Save Edits"/> 
+							</div>
+						</fieldset>
+					<li>
+				</ul>	
 				</form>
 			</div>
 			
@@ -182,7 +187,7 @@
         </div>
 	
 		<div data-role="content" id="displayCouch">
-			<ul id="noteList" data-role="listview"></ul>
+			<ul id="noteList" data-role="listview" data-inset="true"></ul>
 		</div>
 		
 		<div data-role="footer" data-position="fixed" data-id="home">
