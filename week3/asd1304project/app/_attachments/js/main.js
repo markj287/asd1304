@@ -13,9 +13,9 @@ $('#home').on('pageinit', function(){
 				$('#noteList').append(
 					$('<li>').append(
 						$('<a>').attr('href','#')
-							.text("Title: " + title )
-					)						
-				);
+							.text("Date: " + date )
+					)					
+				); 
 			});
 			
 			$('#noteList').listview('refresh');
