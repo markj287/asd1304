@@ -1,3 +1,8 @@
+//Mark Johnson
+// ASD1304
+// Week 4 prject 4 
+
+
 $('#home').on('pageinit', function(){
 	$.ajax({
 		"url": "_view/notes",
@@ -13,7 +18,25 @@ $('#home').on('pageinit', function(){
 				$('#noteList').append(
 					$('<li>').append(
 						$('<a>').attr('href','#')
+							.text("Title: " + title )
+					)					
+				); 
+				$('#noteList').append(
+					$('<li>').append(
+						$('<a>').attr('href','#')
 							.text("Date: " + date )
+					)					
+				); 
+				$('#noteList').append(
+					$('<li>').append(
+						$('<a>').attr('href','#')
+							.text("Where: " + where)
+					)					
+				); 
+				$('#noteList').append(
+					$('<li>').append(
+						$('<a>').attr('href','#')
+							.text("Notes: " + notes )
 					)					
 				); 
 			});
@@ -23,6 +46,8 @@ $('#home').on('pageinit', function(){
 		}
 	});
 });
+
+
 
 //Loads data.csv
 $( '#csv-data-btn' ).bind( 'click', function(){
