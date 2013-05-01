@@ -2,6 +2,21 @@
 // ASD1304
 // Week 4 prject 4 
 
+$("#home").on("pageinit", function() {
+	console.log("Homepage has loaded!");
+
+	var changePage = function(pageId) {
+		$('#' + pageId).trigger('pageinit');
+			$.mobile.changePage($('#' + pageId), {
+			type:"post",
+			data:$("noteForm").serialize(),
+			reloadPage:true,
+			transition:"slide"
+		});
+	};
+
+}); // End code for home page.
+
 
 $('#home').live('pageshow', function(){
 	$.couch.db("notemate-app-wk4").view("notemate/notes", {
