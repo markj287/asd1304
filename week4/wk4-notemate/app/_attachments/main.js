@@ -26,6 +26,29 @@ $('#home').live('pageshow', function(){
 	});
 });
 
+var urlVars = function(){
+	var urlData = $($.mobile.activePage).data("url");
+	var urlParts = urlData.split('?');
+	var urlPairs = urlParts[1].split('&');
+	var urlValues = {}; // empty object
+	
+	for (var pair in urlPairs){
+		var keyValue = urlPairs[pair].split('=');
+		var key = decodeURIComponent(keyValue[0]);
+		var value = decodeURIComponent(keyValue[1]);
+		urlValues[key] = value;
+	}// end loop
+	
+	return urlValues;
+	
+}; // end urlValues function
+
+$('#noteDetailsPage').live('pageshow', function(){
+	var note = urlVars()["note"];
+	$.couch.db("notemate-app-wk4").view(doc,{
+		
+	});
+});
 
 //Loads data.csv
 $( '#csv-data-btn' ).bind( 'click', function(){
