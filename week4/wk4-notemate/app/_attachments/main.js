@@ -4,10 +4,25 @@
 
 
 $('#home').live('pageshow', function(){
-	$.couch.db("asd1304").view("app/notes", {
+	$.couch.db("notemate-app-wk4").view("notemate/notes", {
 		success:function (data) {
-			console.log(data);
-		}
+			
+			$('#noteList').empty();
+			$.each(data.rows, function(index, value){
+				var note = (value.value || value.doc) 
+				$('#noteList').append(
+					$('<li>').append(
+						$('<a>').attr('href','note.html?note=' + note.title)
+								.text(note.title)
+					)					
+				); 
+			});
+			
+			$('#noteList').listview('refresh');
+		},
+			error: function(status) {
+				console.log(status);
+			}
 	});
 });
 
