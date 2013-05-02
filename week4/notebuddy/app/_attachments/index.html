@@ -13,6 +13,7 @@
 		
 <body>
 
+	<!-------------------- My Homepage ---------------------->
 	<div data-role="page" id="home">
 		<div data-role="header" data-theme="e" data-id="main" data-position="fixed">
 			<h1>NoteBuddy</h1>
@@ -20,25 +21,86 @@
 		
 		<div id="feature">
 			<h4 style="text-align:center; color:#fff; padding-top:10px;">Create Notes on the go With NoteBuddy</h4>				
-			<a href="#createNote" data-role="button" style="width:90%; margin: 0px auto 8px auto " data-theme="e">Create Note</a>				
+			<a href="#createNote" data-role="button" style="width:90%; margin:0px auto 8px auto" data-corners="false" data-theme="e">Create Note</a>				
 		</div>
 		
 		<div data-role="content">	
 			<ul data-role="listview">
-				<li><a id="noteBtn" href="#createNote" data-transition="slide">View Notes</a></li>
+				<li><a id="noteBtn" href="#viewNotes" data-transition="slide">View Notes</a></li>
 			</ul>	
 		</div> <!-- end content -->
 		
 		<div data-role="footer" data-position="fixed" data-id="main">
 			<div data-role="navbar" id="navbar" data-position="fixed" data-theme="e">
 				<ul>
-					<li><a href="#home" class="ui-btn-active ui-state-persist">Home</a></li>
+					<li><a href="#home">Home</a></li>
 					<li><a href="#socialNetworks">Connect with me</a></li>
 				</ul>
 			</div>
 		</div> <!-- end footer -->
-	
 	</div> <!--  end home page -->
+	
+	<!-------------------- View Notes Page ---------------------->
+	<div data-role="page" id="viewNotes">
+		<div data-role="header" data-theme="e" data-id="main" data-position="fixed">
+			<h1>NoteBuddy | View Notes</h1>
+		</div>
+		
+		<div data-role="content">
+		
+		</div> <!-- end content -->
+		
+	<div data-role="footer" data-position="fixed" data-id="main">
+		<div data-role="navbar" id="navbar" data-position="fixed" data-theme="e">
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#socialNetworks">Connect with me</a></li>
+			</ul>
+		</div>
+	</div> <!-- end footer -->
+	</div> <!-- end view notes page -->
+	
+	<!-------------------- Create Notes Page ---------------------->
+	<div data-role="page" id="viewNotes">
+		<div data-role="header" data-theme="e" data-id="main" data-position="fixed">
+			<h1>NoteBuddy | Create a Note</h1>
+		</div>
+		
+		<div data-role="content">
+		
+		</div> <!-- end content -->
+		
+	<div data-role="footer" data-position="fixed" data-id="main">
+		<div data-role="navbar" id="navbar" data-position="fixed" data-theme="e">
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#socialNetworks">Connect with me</a></li>
+			</ul>
+		</div>
+	</div> <!-- end footer -->
+	</div> <!-- end create a new note page -->
+	
+	<!-------------------- Connect with me Page ---------------------->
+	<div data-role="page" id="socialNetworks">
+		<div data-role="header" data-theme="e" data-id="main" data-position="fixed">
+			<h1>NoteBuddy | Connect With Me</h1>
+		</div>
+		
+		<div data-role="content">
+			
+		
+		</div> <!-- end content -->
+		
+	<div data-role="footer" data-position="fixed" data-id="main">
+		<div data-role="navbar" id="navbar" data-position="fixed" data-theme="e">
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#socialNetworks">Connect with me</a></li>
+			</ul>
+		</div>
+	</div> <!-- end footer -->
+	</div> <!-- end view notes page -->
+	
 
 
 <script src="jquery-1.8.2.min.js"></script>
