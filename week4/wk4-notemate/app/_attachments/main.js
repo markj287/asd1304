@@ -186,7 +186,7 @@ $("#display").click(function(){
       getData();
       return false;
   });
-
+/*
 var autofillData = function (){
 	//store JSON data 
 	for(var n in json){
@@ -194,12 +194,12 @@ var autofillData = function (){
 	    localStorage.setItem(id, JSON.stringify(json[n]));
 	}
 };
-
+*/
 var getData = function(){
-	if(localStorage.length === 0){
-        	alert("No notes to view, some will be added.");
-        	autofillData();
-        }
+	//if(localStorage.length === 0){
+        	//alert("No notes to view, some will be added.");
+        	//autofillData();
+    //    }
 	        var makeDiv = $('<div>');
 	        makeDiv.attr("id", "items");
 	        var makeList = $('<div>');
@@ -278,17 +278,26 @@ var storeData = function(data){
         item.favorite 	 	= ["Favorite Note:", $('input[name=favorite]:checked').val()];
         item.amount		= ["Amount of items:", $('#amount').val()];
         item.notes 		= ["Notes:", $('#notes').val()];
+
+        $.couch.db("notemate-app-wk4").saveDoc(item, {
+            		success: function(data) {
+            			alert("Note Saved");
+            		},
+            		error: function(status){
+            			console.log(status);
+            		}
+            }); // end saveDoc function
 		
 	//save to local storage
-	console.log(id, item);
-       localStorage.setItem(id, JSON.stringify(item));
-       alert("Note Saved!");
+	//console.log(id, item);
+      //localStorage.setItem(id, JSON.stringify(item));
+      // alert("Note Saved!");
 		
-		$('form#noteForm')[0].reset();
-		$('#amount').val('1').slider('refresh');
-	    	$('#selectCat').val('selection').selectmenu('refresh');
-		$('#type-2').attr('checked',false).checkboxradio('refresh');
-		$('#type-1').attr('checked',true).checkboxradio('refresh');
+	$('form#noteForm')[0].reset();
+	$('#amount').val('1').slider('refresh');
+    	$('#selectCat').val('selection').selectmenu('refresh');
+	$('#type-2').attr('checked',false).checkboxradio('refresh');
+	$('#type-1').attr('checked',true).checkboxradio('refresh');
 }; 
 
  var editItem = function(){
