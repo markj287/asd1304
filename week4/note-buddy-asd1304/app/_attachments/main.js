@@ -47,6 +47,7 @@ $('#notes').on("pageinit", function() {
 					id = notes.id
 					rev = notes.value.rev
 				$(''+
+					//'<a>' + 'attr("href", "notes.html?notes=")' + '</a>' +
 					'<div id="'+ id +'" data-role="collapsible" data-content-theme="e">'+
 						'<h3>'+ key +'</h3>'+
 						'<p>Title: '+ title +'</p>'+
