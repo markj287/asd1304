@@ -1,29 +1,132 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>My New CouchApp</title>
-    <link rel="stylesheet" href="style/main.css" type="text/css">
-  </head>
-  <body>
-    <div id="account"></div>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Note Buddy</title>
+		<meta name="HandheldFriendly" content="True"/>
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <h1>Generated CouchApp</h1>
+		<link rel="stylesheet" href="jquery.mobile-1.2.1.min.css" />
+		<link href="main.css" rel="stylesheet" type="text/css" />
+	</head>
+<body>
 
-    <div id="profile"></div>
-    <div id="items"></div>
+<!-----------------Homepage ---------------------->
+<div data-role="page" id="home">
+	<div data-role="header" data-theme="e" data-id="main">
+		<h1>NoteBuddy</h1>
+	</div>
+	<div id="banner">
+		<h2 style="text-align: center; color: white; font-weight: none;">Create notes on the go and access them on any of your devices</h2>
+		
+		<a href="#newNote" data-role="button" style="width:90%; margin: 0px auto 8px auto " data-theme="e">Add a Note</a>
+		
+	</div>
+	<div id="browseNote" data-role="content" style="margin: 16px 0px 0px 0px">
+		<ul data-role="listview">
+			<li><a id="notesBtn" href="#notes" data-transition="slide">View Notes</a></li>
+		</ul>
+	</div> 
+	
+	<div data-role="footer" data-position="fixed" data-id="main">
+		<div data-role="navbar" id="navbar" data-position="fixed" data-theme="a">
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#notes">Notes</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
 
-    <div id="sidebar">
-      <p>Edit welcome message.</p>
-      <p>Ideas: You could easily turn this into a photo sharing app, or a grocery list, or a chat room.</p>
-    </div>
-  </body>
-  <script src="vendor/couchapp/loader.js"></script>
-  <script type="text/javascript" charset="utf-8">
-    $.couch.app(function(app) {
-      $("#account").evently("account", app);
-      $("#profile").evently("profile", app);
-      $.evently.connect("#account","#profile", ["loggedIn","loggedOut"]);
-      $("#items").evently("items", app);
-    });
-  </script>
+<!----------------- Notes Page ---------------------->	
+<div data-role="page" id="notes">
+	<div data-role="header" data-theme="e" data-position="fixed" data-id="main">
+		<a id="back" data-rel="back" data-role="button" data-inline="true" data-mini="true" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-left">back</a>
+		<h1>Saved Notes</h1>
+	</div>
+
+	<div data-role="content">
+		<div data-role="collapsible-set">
+			<div id="noteList" data-role="listview" data-filter="true" data-inset="false">
+				
+			</div>	
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed" data-id="main">
+		<div data-role="navbar" id="navbar" data-position="fixed" data-theme="a">
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#notes">Notes</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div>
+
+</div>
+
+<!----------------- New Note Page ---------------------->			
+<div data-role="page" id="newNote">
+	<div data-role="header" data-theme="e" data-position="fixed" data-id="main">
+		<a id="back" data-rel="back" data-role="button" data-inline="true" data-mini="true" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-left">back</a>
+		<h1 id="headerBar">New Note</h1>	
+	</div>			
+	
+	<div data-role="content">
+	
+		<form action="" method="post" id="addItem">
+
+			<div data-role="fieldcontain">
+				<p>*fields are required.</p>
+				<label for="title">*Title:</label>
+				<input type="text" name="title" id="title" placeholder="Note Title" data-mini="true" class="required" />
+			</div>
+
+			<div data-role="fieldcontain">	
+				<label for="content">*Content:</label>
+				<textarea name="content" id="content" placeholder="Note Content..." data-mini="true" class="required" ></textarea>
+			</div>
+
+			<div data-role="fieldcontain">	
+				<label for="category">Category:</label>
+				<select name="category" id="category" data-mini="true">
+					<option value="Entertainment">Entertainment</option>
+					<option value="Sports">Sports</option>
+					<option value="Exercise">Exercise</option>
+					<option value="Personal">Personal</option>
+					<option value="Other">Other</option>
+				</select>					
+			</div>
+
+			<div data-role="fieldcontain">
+				<fieldset class="ui-grid-a" >
+					<div class="ui-block-a" style="width:75%; padding:2px">
+						<input id="submit" type="submit" data-theme="e" value="Save Note" />
+					</div>
+					<div class="ui-block-b" style="width:25%; padding:6px 0px 6px 10px ">
+						<input id="reset" type="reset" data-mini="true" data-theme="a" value="Reset"/>
+					</div>
+				</fieldset>
+			</div>
+			
+		</form>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="main">
+		<div data-role="navbar" data-position="fixed" data-theme="a">
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#notes">Notes</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div>
+</div>
+
+<script src="jquery-1.8.2.min.js"></script>
+<script src="jquery.mobile-1.2.1.min.js"></script>
+<script src="jquery.validate.min.js"></script>
+<script src="modernizr.custom.min.js"></script>
+<script src="jquery.couch.js"></script>
+<script src="main.js"></script>
+</body>
 </html>
+
