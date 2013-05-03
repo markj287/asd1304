@@ -23,7 +23,7 @@ $('#newNote').on('pageinit', function (){
 			note.content		= content.val();
 			note.category		= category.val();
 			
-		$.couch.db("notebuddyapp").saveDoc(notes, {
+		$.couch.db("notebuddyapp").saveDoc(note, {
 			success: function(data) {
 				console.log(data);
 			}
