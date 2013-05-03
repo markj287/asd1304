@@ -3,8 +3,11 @@ function (doc) {
 		emit(doc.make, {
 			"rev": 		doc._rev,
 			"title": 	doc.title,
+			"category": doc.category,
 			"date": 	doc.date,
 			"where": 	doc.where,
+			"favorite": doc.favorite,
+			"amount":   doc.amount,
 			"notes": 	doc.notes
 		});
 	}

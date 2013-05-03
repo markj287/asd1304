@@ -25,16 +25,15 @@ var title = $('#title');
 	
 	function storeData() {
 		var favorite = $(':radio:checked').val();
-		var display = getCheckboxValue();
 		var item			= {};
 			item._id		= ("note" + $.now());
 			item.title		= title.val();
 			item.selectCat	= selectCat.val();
-			item.dadded		= dadded.val();
+			item.date		= date.val();
 			item.where		= where.val();
 			item.favorite	= favorite;
-			item.amount		= amount.val();
-			itme.notes		= notes.val();
+			//item.amount		= amount.val();
+			//item.notes		= notes.val();
 			
 		$.couch.db("notebuddy").saveDoc(item, {
 			success: function(data) {
@@ -63,18 +62,18 @@ $('#viewNotes').on("pageinit", function() {
 	$.couch.db("notebuddy").view("notebuddy/notes", {
 		success: function(data) {
 			$("#noteList").empty();
-			$.each(data.rows, function(index, note) {
-				var key = note.key
-					title = note.value.title
-					dadded = note.value.dadded
-					where = note.value.where
-					favorite = note.value.favorite
-					amount = note.value.amount
-					notes = note.value.notes
-					id = note.id
-					rev = note.value.rev
+			$.each(data.rows, function(index, notes) {
+				var key = notes.key
+					title = notes.value.title
+					dadded = notes.value.dadded
+					where = notes.value.where
+					favorite = notes.value.favorite
+					amount = notes.value.amount
+					notes = notes.value.notes
+					id = notes.id
+					rev = notes.value.rev
 				$(''+
-					'<div id="'+ id +'" data-role="collapsible" data-content-theme="a">'+
+					'<div id="'+ id +'" data-role="collapsible" data-content-theme="e">'+
 						'<h4>'+ key +'</h4>'+
 						'<p>Title: '+ title +'</p>'+
 						'<p>Date: '+ dadded +'</p>'+
